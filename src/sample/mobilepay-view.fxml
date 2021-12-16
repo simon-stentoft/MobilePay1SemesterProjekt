@@ -8,7 +8,7 @@
 
 <Pane fx:id="CreateAccont" prefHeight="611.0" prefWidth="491.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
    <children>
-      <Label layoutX="225.0" layoutY="11.0" prefHeight="37.0" prefWidth="61.0" text="EasyPay" textAlignment="CENTER" textFill="#093feb">
+      <Label layoutX="215.0" layoutY="14.0" prefHeight="37.0" prefWidth="61.0" text="EasyPay" textAlignment="CENTER" textFill="#093feb">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
@@ -27,7 +27,7 @@
       <Label layoutX="14.0" layoutY="260.0" text="Bruger Navn:" />
       <Label layoutX="14.0" layoutY="290.0" text="Kode:" />
       <Button layoutX="387.0" layoutY="549.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="90.0" text="Lav Bruger" />
-      <Button layoutX="21.0" layoutY="556.0" mnemonicParsing="false" text="Tilbage" />
+      <Button fx:id="tlbageButton" layoutX="21.0" layoutY="556.0" mnemonicParsing="false" onAction="#switchSceneToStartScreen" text="Tilbage" />
       <TextField fx:id="kontrolCifreTextField" layoutX="171.0" layoutY="196.0" prefHeight="25.0" prefWidth="305.0" />
       <TextField fx:id="navnTextField" layoutX="171.0" layoutY="76.0" prefHeight="25.0" prefWidth="305.0" />
       <TextField fx:id="tlfTextField" layoutX="171.0" layoutY="106.0" prefHeight="25.0" prefWidth="305.0" />
