@@ -24,7 +24,7 @@
       <Label layoutX="83.0" layoutY="225.0" text="Brugernavn:" />
       <Label layoutX="115.0" layoutY="262.0" text="Kode:" />
       <PasswordField fx:id="kodePasswordField" layoutX="152.0" layoutY="258.0" prefHeight="25.0" prefWidth="188.0" />
-      <Button fx:id="loginButton" layoutX="222.0" layoutY="306.0" mnemonicParsing="false" text="Login" />
+      <Button fx:id="loginButton" layoutX="222.0" layoutY="306.0" mnemonicParsing="false" onAction="#switchSceneToSendMoneyScreen" text="Login" />
       <Button fx:id="tilbageButton" layoutX="31.0" layoutY="549.0" mnemonicParsing="false" onAction="#switchSceneToStartScreen" text="Tilbage" />
    </children>
 </AnchorPane>

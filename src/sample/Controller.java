@@ -36,4 +36,18 @@ public class Controller {
         stage.setScene(scene);
         stage.show();
     }
+    public void switchSceneToSendMoneyScreen(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("sendMoneyView.fxml"));
+        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+    public void switchSceneToRequestMoneyScreen(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("requestMoneyView.fxml"));
+        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
 }
