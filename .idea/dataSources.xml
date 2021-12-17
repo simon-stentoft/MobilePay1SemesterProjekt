@@ -8,5 +8,12 @@
       <jdbc-url>jdbc:sqlite:D:\IntelliJ Java projecter\MobilePay1SemesterProjekt\UserInfo</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
+    <data-source source="LOCAL" name="mobilePay.db" uuid="10ccf471-f564-405f-a5fa-c46151ba571c">
+      <driver-ref>sqlite.xerial</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
+      <jdbc-url>jdbc:sqlite:$PROJECT_DIR$/mobilePay.db</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
   </component>
 </project>
