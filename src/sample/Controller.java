@@ -52,4 +52,32 @@ public class Controller {
         stage.setScene(scene);
         stage.show();
     }
+
+    //CreateUser to Create User
+    public void createUser(ActionEvent event) {
+        String navn = navnTextField.getText();
+        String telefon = tlfTextField.getText();
+        String email = emailTextField.getText();
+        int kontoNr = Integer.parseInt(kontoNrTextField.getText());
+        int kontrolCifre = Integer.parseInt(kontrolCifreTextField.getText());
+        String expirationDate = expirationDateTextField.getText();
+        String userName = userNameTextField.getText();
+        String kode = kodeTextField.getText();
+
+        System.out.println(navn+" "+telefon+" "+email+" "+kontoNr+" "+kontrolCifre+" "+expirationDate+" "+userName+" "+kode);
+    }
+
+    @Override
+    public String toString() {
+        return "LavBruger{" +
+                "navnTextField=" + navnTextField +
+                ", tlfTextField=" + tlfTextField +
+                ", emailTextField=" + emailTextField +
+                ", kontoNrTextField=" + kontoNrTextField +
+                ", kontrolCifreTextField=" + kontrolCifreTextField +
+                ", expirationDateTextField=" + expirationDateTextField +
+                ", userNameTextField=" + userNameTextField +
+                ", kodeTextField=" + kodeTextField +
+                '}';
+    }
 }
