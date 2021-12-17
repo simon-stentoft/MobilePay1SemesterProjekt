@@ -17,6 +17,16 @@ public class Controller {
     private Scene scene;
     private Parent root;
 
+    public TextField navnTextField;
+    public TextField tlfTextField;
+    public TextField emailTextField;
+    public TextField kontoNrTextField;
+    public TextField kontrolCifreTextField;
+    public TextField expirationDateTextField;
+    public TextField userNameTextField;
+    public TextField kodeTextField;
+
+
     public void switchSceneToCreateUser(ActionEvent event) throws IOException {
         root = FXMLLoader.load(getClass().getResource("createUserView.fxml"));
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
@@ -65,6 +75,7 @@ public class Controller {
         String kode = kodeTextField.getText();
 
         System.out.println(navn+" "+telefon+" "+email+" "+kontoNr+" "+kontrolCifre+" "+expirationDate+" "+userName+" "+kode);
+        //LavBruger.class(navn,telefon,email,kontoNr,kontrolCifre,expirationDate,userName,kode);
     }
 
     @Override
