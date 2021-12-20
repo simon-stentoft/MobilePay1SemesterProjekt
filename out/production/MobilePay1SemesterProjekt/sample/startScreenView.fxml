@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane fx:id="startScreen" prefHeight="611.0" prefWidth="491.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <Button fx:id="LoginButton" layoutX="104.0" layoutY="226.0" mnemonicParsing="false" onAction="#switchSceneToLogIn" prefHeight="37.0" prefWidth="111.0" text="Log in" />
+      <Button fx:id="opretNyBrugerButton" layoutX="270.0" layoutY="226.0" mnemonicParsing="false" onAction="#switchSceneToCreateUser" prefHeight="37.0" prefWidth="111.0" text="Opret ny bruger" />
+      <Label layoutX="215.0" layoutY="20.0" prefHeight="37.0" prefWidth="55.0" text="EasyPay" textAlignment="CENTER" textFill="#093feb">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane fx:id="loginscene" prefHeight="611.0" prefWidth="491.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <Label layoutX="218.0" layoutY="30.0" prefHeight="37.0" prefWidth="55.0" text="EasyPay" textAlignment="CENTER" textFill="#093feb">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="224.0" layoutY="87.0" text="Log in">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <TextField fx:id="brugernavnTextField" layoutX="152.0" layoutY="221.0" prefHeight="25.0" prefWidth="188.0" promptText="Skriv din bruger info" />
+      <Label layoutX="83.0" layoutY="225.0" text="Brugernavn:" />
+      <Label layoutX="115.0" layoutY="262.0" text="Kode:" />
+      <PasswordField fx:id="kodePasswordField" layoutX="152.0" layoutY="258.0" prefHeight="25.0" prefWidth="188.0" />
+      <Button fx:id="loginButton" layoutX="222.0" layoutY="306.0" mnemonicParsing="false" onAction="#switchSceneToSendMoneyScreen" text="Login" />
+      <Button fx:id="tilbageButton" layoutX="31.0" layoutY="549.0" mnemonicParsing="false" onAction="#switchSceneToStartScreen" text="Tilbage" />
+   </children>
+</AnchorPane>
