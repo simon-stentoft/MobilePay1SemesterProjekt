@@ -47,6 +47,16 @@ public class Database {
             throwables.printStackTrace();
         }
     }
+   public static boolean login (String loginUserName,String loginPassword){
+
+            String sql = "SELECT * FROM bruger WHERE \n userNavn =" + loginUserName
+                    + " if(kode = "+ loginPassword + ") \n  return true;";
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return false;
+    }
 }
 /*
 

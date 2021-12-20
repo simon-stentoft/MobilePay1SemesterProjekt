@@ -5,6 +5,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
@@ -25,6 +26,8 @@ public class Controller {
     public TextField expirationDateTextField;
     public TextField userNameTextField;
     public TextField kodeTextField;
+    public TextField brugernavnTextField;
+    public PasswordField kodePasswordField;
 
 
     public void switchSceneToCreateUser(ActionEvent event) throws IOException {
@@ -49,11 +52,23 @@ public class Controller {
         stage.show();
     }
     public void switchSceneToSendMoneyScreen(ActionEvent event) throws IOException {
+
+        Boolean registreret = false;
+        String loginUserName = brugernavnTextField.getText();
+        String loginPassword = kodePasswordField.getText();
+
+
+        registreret = Database.login(loginUserName,loginPassword);
+
+        if (registreret){
         root = FXMLLoader.load(getClass().getResource("sendMoneyView.fxml"));
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
+        }
+        //
+        //System.out.println(brugernavn+" "+password);
     }
     public void switchSceneToRequestMoneyScreen(ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("requestMoneyView.fxml"));
