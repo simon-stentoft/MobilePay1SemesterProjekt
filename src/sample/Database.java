@@ -33,7 +33,21 @@ public class Database {
         }
     }
 
-    private void addNewUser() {
+    public void addNewUser(String navn,int phone,String email,int kontoNr,int kontrolCifre,String expirationDate,String userName,String kode) {
+        try {
+            String sql = "INSERT INTO bruger(navn, phone, email, kontonr, kontrolCifre, expirationDate, userName, kode)"
+                    + "VALUES(" + phone +", "+ navn + ", " + email + ", " + kontoNr + ", "
+                    + kontrolCifre + ", " + expirationDate + ", " + userName + ", " + kode + ");";
+            Statement stmt = connection.createStatement();
+            stmt.execute(sql);
+            System.out.println("Connection to SQLite has been established.");
+            stmt.close();
 
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
     }
 }
+/*
+
+ */
