@@ -24,7 +24,7 @@ public class Controller {
     public TextField kontoNrTextField;
     public TextField kontrolCifreTextField;
     public TextField expirationDateTextField;
-    public TextField userNameTextField;
+    public TextField usernameTextField;
     public TextField kodeTextField;
     public TextField brugernavnTextField;
     public PasswordField kodePasswordField;
@@ -60,13 +60,13 @@ public class Controller {
 
         registreret = Database.login(loginUserName,loginPassword);
 
-       if (registreret){
+       //if (registreret){
         root = FXMLLoader.load(getClass().getResource("sendMoneyView.fxml"));
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
-        }
+       // }
         //
         //System.out.println(brugernavn+" "+password);
     }
@@ -80,14 +80,15 @@ public class Controller {
 
     //CreateUser to Create User
     public void createUser(ActionEvent event) {
-        String navn = navnTextField.getText();
-        String telefon = tlfTextField.getText();
-        String email = emailTextField.getText();
-        int kontoNr = Integer.parseInt(kontoNrTextField.getText());
-        int kontrolCifre = Integer.parseInt(kontrolCifreTextField.getText());
-        String expirationDate = expirationDateTextField.getText();
-        String userName = userNameTextField.getText();
-        String kode = kodeTextField.getText();
+        // kan ikke skrive bogstaver når skaber bruger!!!
+        String testname = navnTextField.getText();
+        int phone1 = Integer.parseInt(tlfTextField.getText());
+        String email1 = emailTextField.getText();
+        int kontonr1 = Integer.parseInt(kontoNrTextField.getText());
+        int kontrolcifre1 = Integer.parseInt(kontrolCifreTextField.getText());
+        String expirationdate1 = expirationDateTextField.getText();
+        String username1 = usernameTextField.getText();
+        String password1 = kodeTextField.getText();
 
         System.out.println(navn+" "+telefon+" "+email+" "+kontoNr+" "+kontrolCifre+" "+expirationDate+" "+userName+" "+kode);
         //LavBruger.class(navn,telefon,email,kontoNr,kontrolCifre,expirationDate,userName,kode);
@@ -102,7 +103,7 @@ public class Controller {
                 ", kontoNrTextField=" + kontoNrTextField +
                 ", kontrolCifreTextField=" + kontrolCifreTextField +
                 ", expirationDateTextField=" + expirationDateTextField +
-                ", userNameTextField=" + userNameTextField +
+                ", userNameTextField=" + usernameTextField +
                 ", kodeTextField=" + kodeTextField +
                 '}';
     }
