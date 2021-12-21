@@ -42,7 +42,7 @@ public class Database {
             stmt.execute(sql);
             System.out.println("Connection to SQLite has been established.");
             stmt.close();
-
+            //SQL error or missing database (no such column: ak)
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }

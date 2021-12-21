@@ -60,7 +60,7 @@ public class Controller {
 
         registreret = Database.login(loginUserName,loginPassword);
 
-        if (registreret){
+       if (registreret){
         root = FXMLLoader.load(getClass().getResource("sendMoneyView.fxml"));
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);
