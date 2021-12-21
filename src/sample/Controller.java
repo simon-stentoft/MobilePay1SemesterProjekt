@@ -95,7 +95,7 @@ public class Controller {
     }
 
     @Override
-    public String toString() {
+    public String toString()  {
         return "LavBruger{" +
                 "navnTextField=" + navnTextField +
                 ", tlfTextField=" + tlfTextField +
@@ -106,5 +106,28 @@ public class Controller {
                 ", userNameTextField=" + usernameTextField +
                 ", kodeTextField=" + kodeTextField +
                 '}';
+    }
+
+    public void switchSceneFromloginToSendMoneyScreen(ActionEvent event) throws IOException {
+
+        Boolean registreret = false;
+        String loginUsername = brugernavnTextField.getText();
+        String loginPassword = kodePasswordField.getText();
+        Database db = new Database();
+
+        db.login(event, loginUsername,loginPassword);
+
+
+
+        //db.login(loginUsername,loginPassword);
+        /*if (registreret){
+          root = FXMLLoader.load(getClass().getResource("sendMoneyView.fxml"));
+         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            scene = new Scene(root);
+            stage.setScene(scene);
+            stage.show();
+        }*/
+        //
+        //System.out.println(brugernavn+" "+password);
     }
 }

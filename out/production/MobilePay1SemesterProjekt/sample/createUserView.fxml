@@ -30,12 +30,12 @@
       <Button fx:id="tlbageButton" layoutX="21.0" layoutY="556.0" mnemonicParsing="false" onAction="#switchSceneToStartScreen" text="Tilbage" />
 
       <TextField fx:id="navnTextField" layoutX="171.0" layoutY="76.0" prefHeight="25.0" prefWidth="305.0" promptText="String" />
-      <TextField fx:id="kontrolCifreTextField" layoutX="171.0" layoutY="196.0" prefHeight="25.0" prefWidth="305.0" promptText="int" />
       <TextField fx:id="tlfTextField" layoutX="171.0" layoutY="106.0" prefHeight="25.0" prefWidth="305.0" promptText="int" />
-      <TextField fx:id="usernameTextField" layoutX="171.0" layoutY="256.0" prefHeight="25.0" prefWidth="305.0" promptText="String" />
       <TextField fx:id="emailTextField" layoutX="171.0" layoutY="136.0" prefHeight="25.0" prefWidth="305.0" promptText="String" />
-      <TextField fx:id="kodeTextField" layoutX="171.0" layoutY="286.0" prefHeight="25.0" prefWidth="305.0" promptText="String" />
-      <TextField fx:id="expirationDateTextField" layoutX="171.0" layoutY="226.0" prefHeight="25.0" prefWidth="305.0" promptText="String" />
       <TextField fx:id="kontoNrTextField" layoutX="171.0" layoutY="166.0" prefHeight="25.0" prefWidth="305.0" promptText="int" />
+      <TextField fx:id="kontrolCifreTextField" layoutX="171.0" layoutY="196.0" prefHeight="25.0" prefWidth="305.0" promptText="int" />
+      <TextField fx:id="expirationDateTextField" layoutX="171.0" layoutY="226.0" prefHeight="25.0" prefWidth="305.0" promptText="String" />
+      <TextField fx:id="usernameTextField" layoutX="171.0" layoutY="256.0" prefHeight="25.0" prefWidth="305.0" promptText="String" />
+      <TextField fx:id="kodeTextField" layoutX="171.0" layoutY="286.0" prefHeight="25.0" prefWidth="305.0" promptText="String" />
    </children>
 </Pane>
