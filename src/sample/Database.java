@@ -33,14 +33,14 @@ public class Database {
         }
     }
 
-    public void addNewUser(String navn,int phone,String email,int kontoNr,int kontrolCifre,String expirationDate,String userName,String kode) {
+    public void addNewUser2(String testname,int phone1,String email1,int kontonr1,int kontrolcifre1,String expirationdate1,String username1,String password1) {
         try {
-            String sql = "INSERT INTO bruger(navn, phone, email, kontonr, kontrolCifre, expirationDate, userName, kode)"
-                    + "VALUES(" + phone +", "+ navn + ", " + email + ", " + kontoNr + ", "
-                    + kontrolCifre + ", " + expirationDate + ", " + userName + ", " + kode + ");";
+            String sql = "INSERT INTO user(name,phone,email,kontonr,kontrolcifre,expirationdate,username,password)"
+                    + "VALUES(" + testname +","+ phone1 + "," + email1 + "," + kontonr1 + ","
+                    + kontrolcifre1 + "," + expirationdate1 + "," + username1 + "," + password1 + ")";
             Statement stmt = connection.createStatement();
             stmt.execute(sql);
-            System.out.println("Connection to SQLite has been established.");
+            System.out.println("addNewUser connection to SQLite has been established.");
             stmt.close();
             //SQL error or missing database (no such column: ak)
         } catch (SQLException throwables) {

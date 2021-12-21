@@ -4,9 +4,11 @@ public class Bruger {
     private String Fnavn;
     private int phone;
     private String Email;
-    private int kontoNr,kontrolCifre;
-    private int expirationDate_M,expirationDate_y;
-    private String userName, kode;
+    private int kontonr, kontrolcifre;
+    private String expirationdate;
+    private String username, password;
+    private int userBalance;
+    private int amount;
 
 
     public Bruger(String name, int phone, String email, int kontonr, int kontrolcifre, String expirationdate, String username, String password, int userBalance, int amount) {
@@ -71,14 +73,27 @@ public class Bruger {
 
 
     public String getUserName() {
-        return userName;}
-    public void setUserName(String userName) {
-        this.userName = userName;}
+        return username;}
+    public void setUserName(String username) {
+        this.username = username;}
 
 
 
-    public String getKode() {
-        return kode;}
-    public void setKode(String kode) {
-        this.kode = kode;}
+    public String getpassword() {
+        return password;}
+    public void setpassword(String password) {
+        this.password = password;
+    }
+
+
+    public int getUserBalance() {
+        return userBalance;}
+    public void setUserBalance(int userBalance) {
+        this.userBalance = userBalance;}
+
+
+    public int getAmount() {
+        return amount;}
+    public void setAmount(int amount) {
+        this.amount = amount;}
 }

@@ -53,12 +53,12 @@ public class Controller {
     }
     public void switchSceneToSendMoneyScreen(ActionEvent event) throws IOException {
 
-        Boolean registreret = false;
-        String loginUserName = brugernavnTextField.getText();
-        String loginPassword = kodePasswordField.getText();
+        //Boolean registreret = false;
+        //String loginUsername = brugernavnTextField.getText();
+       //String loginPassword = kodePasswordField.getText();
 
 
-        registreret = Database.login(loginUserName,loginPassword);
+        //registreret = Database.login(loginUsername,loginPassword);
 
        //if (registreret){
         root = FXMLLoader.load(getClass().getResource("sendMoneyView.fxml"));
