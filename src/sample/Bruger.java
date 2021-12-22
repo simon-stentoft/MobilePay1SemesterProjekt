@@ -1,7 +1,7 @@
 package sample;
 
 public class Bruger {
-    private String Fnavn;
+    private String name;
     private int phone;
     private String Email;
     private int kontonr, kontrolcifre;
@@ -58,17 +58,10 @@ public class Bruger {
 
 
 
-    public int getExpirationDate_M() {
-        return expirationDate_M;}
-    public void setExpirationDate_M(int expirationDate_M) {
-        this.expirationDate_M = expirationDate_M;}
-
-
-
-    public int getExpirationDate_y() {
-        return expirationDate_y;}
-    public void setExpirationDate_y(int expirationDate_y) {
-        this.expirationDate_y = expirationDate_y;}
+    public String getExpirationdate() {
+        return expirationdate;}
+    public void setExpirationdate(String expirationdate) {
+        this.expirationdate = expirationdate;}
 
 
 

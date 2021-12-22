@@ -10,13 +10,18 @@ import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
+import javax.xml.crypto.Data;
 import java.io.IOException;
+import java.sql.Connection;
+import java.sql.Statement;
 
 public class Controller {
 
     private Stage stage;
     private Scene scene;
     private Parent root;
+    private Connection connection;
+    private Statement stmt;
 
     public TextField navnTextField;
     public TextField tlfTextField;
@@ -37,6 +42,7 @@ public class Controller {
         stage.setScene(scene);
         stage.show();
     }
+
     public void switchSceneToLogIn(ActionEvent event) throws IOException {
         root = FXMLLoader.load(getClass().getResource("LogInView.fxml"));
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
@@ -44,6 +50,7 @@ public class Controller {
         stage.setScene(scene);
         stage.show();
     }
+
     public void switchSceneToStartScreen(ActionEvent event) throws IOException {
         root = FXMLLoader.load(getClass().getResource("startScreenView.fxml"));
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
@@ -51,6 +58,7 @@ public class Controller {
         stage.setScene(scene);
         stage.show();
     }
+
     public void switchSceneToSendMoneyScreen(ActionEvent event) throws IOException {
 
         //Boolean registreret = false;
@@ -70,9 +78,12 @@ public class Controller {
         //
         //System.out.println(brugernavn+" "+password);
     }
+
+
+
     public void switchSceneToRequestMoneyScreen(ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("requestMoneyView.fxml"));
-        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
@@ -90,8 +101,11 @@ public class Controller {
         String username1 = usernameTextField.getText();
         String password1 = kodeTextField.getText();
 
-        System.out.println(navn+" "+telefon+" "+email+" "+kontoNr+" "+kontrolCifre+" "+expirationDate+" "+userName+" "+kode);
-        //LavBruger.class(navn,telefon,email,kontoNr,kontrolCifre,expirationDate,userName,kode);
+        System.out.println(testname + ", " + phone1 + ", " + email1 + ", " + kontonr1 + ", " + kontrolcifre1 + ", " + expirationdate1 + ", " + username1 + ", " + password1);
+        //LavBruger.class(navn,telefon,email1,kontonr1,kontrolcifre1,expirationdate1,username1,password1);
+        Database bruger = new Database();
+        //bruger.addNewUser(testname, phone1, email1, kontonr1, kontrolcifre1, expirationdate1, username1, password1);
+
     }
 
     @Override
