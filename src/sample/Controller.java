@@ -90,7 +90,7 @@ public class Controller {
     }
 
     //CreateUser to Create User
-    public void createUser(ActionEvent event) {
+    public void createUser2(ActionEvent event) {
         // kan ikke skrive bogstaver når skaber bruger!!!
         String testname = navnTextField.getText();
         int phone1 = Integer.parseInt(tlfTextField.getText());
@@ -105,6 +105,13 @@ public class Controller {
         //LavBruger.class(navn,telefon,email1,kontonr1,kontrolcifre1,expirationdate1,username1,password1);
         Database bruger = new Database();
         //bruger.addNewUser(testname, phone1, email1, kontonr1, kontrolcifre1, expirationdate1, username1, password1);
+
+    }
+
+    public void createUser(ActionEvent event){
+        Database bruger = new Database();
+        bruger.addNewUser(event,navnTextField.getText(),Integer.parseInt(tlfTextField.getText()),emailTextField.getText(),kontoNrTextField.getText(),
+                kontrolCifreTextField.getText(), expirationDateTextField.getText(), usernameTextField.getText(),kodeTextField.getText());
 
     }
 
