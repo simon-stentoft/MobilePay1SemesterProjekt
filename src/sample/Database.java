@@ -73,6 +73,7 @@ public class Database {
             stmt = connection.createStatement();
             stmt.execute(sql);
             stmt.close();
+            System.out.println("Har lavet bruger");
             c.switchSceneToLogIn(event);
         } catch (SQLException e) {
             e.printStackTrace();
@@ -95,7 +96,7 @@ public class Database {
            prestmt.setString(2,pass);
            ResultSet rs = prestmt.executeQuery();
            if (rs.next()){
-               System.out.println("Skifter scene");
+               System.out.println("Skifter scene til send penge");
                c.switchSceneToSendMoneyScreen(event);
            }else{
                System.out.println("Forkert login");
